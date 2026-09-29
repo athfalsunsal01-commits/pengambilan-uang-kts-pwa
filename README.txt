@@ -11,3 +11,5 @@ PENTING:
 - Deploy Apps Script dengan akses yang sesuai pengguna. Jika iframe tertahan oleh login/cookie browser, buka URL /exec langsung di browser dan atur akses deployment.
 - Service worker hanya menyimpan halaman pembuka, manifest, dan ikon. Data transaksi tetap membutuhkan internet dan tidak disimpan untuk penggunaan offline.
 - Ikon PWA dalam paket ini adalah ikon sederhana buatan paket, bukan logo pondok yang berada di Google Drive. Logo pada halaman aplikasi tetap dimuat dari Apps Script.
+
+VERSI MOBILE: toolbar PWA diperkecil dan kartu Riwayat pada Apps Script dibuat vertikal. Ganti juga Index.html pada proyek Apps Script dan deploy ulang agar perbaikan bagian dalam tampil.
