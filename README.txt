@@ -1,15 +1,11 @@
-PWA PENGAMBILAN UANG & KTS
+PWA PENGAMBILAN UANG & KTS — LOCK MOBILE
 
-1. Upload semua isi folder ini ke hosting HTTPS (contoh: GitHub Pages). Jangan upload ZIP apa adanya.
-2. Buka URL hosting di HP. URL deployment /exec sudah tertanam sebagai bawaan. Jika alamat web app berubah, tekan Atur link dan tempel URL /exec yang baru.
-3. Di Chrome Android: menu ⋮ > Tambahkan ke layar utama / Instal aplikasi.
-4. Di Safari iPhone: Bagikan > Tambahkan ke Layar Utama.
-5. Tombol "Atur link" memungkinkan mengganti URL /exec tanpa mengubah file di hosting.
+1. Ganti Index.html di Apps Script dengan versi dalam tautan terpisah, lalu Deploy > Manage deployments > Edit > pilih versi baru > Deploy. Pertahankan URL /exec yang sudah digunakan.
+2. Di repositori GitHub pengambilan-uang-kts-pwa, ganti index.html, sw.js, manifest.webmanifest, dan folder icons dengan isi folder ini. Commit dan Push dari GitHub Desktop.
+3. Pastikan GitHub Pages memakai main dan /(root). Buka URL Pages pada HP, kemudian Tambahkan ke layar utama.
+4. PWA langsung memuat dashboard Riwayat dari URL /exec; tidak ada pengaturan link pada layar.
+5. Transaksi memerlukan internet. File yang disimpan offline hanya halaman pembuka PWA.
 
-PENTING:
-- Apps Script Code.gs harus memakai setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL) seperti versi proyek ini.
-- Deploy Apps Script dengan akses yang sesuai pengguna. Jika iframe tertahan oleh login/cookie browser, buka URL /exec langsung di browser dan atur akses deployment.
-- Service worker hanya menyimpan halaman pembuka, manifest, dan ikon. Data transaksi tetap membutuhkan internet dan tidak disimpan untuk penggunaan offline.
-- Ikon PWA dalam paket ini adalah ikon sederhana buatan paket, bukan logo pondok yang berada di Google Drive. Logo pada halaman aplikasi tetap dimuat dari Apps Script.
+Jika URL Apps Script berubah di kemudian hari, ganti atribut src pada iframe di index.html dan terbitkan ulang repositori.
 
-VERSI MOBILE: toolbar PWA diperkecil dan kartu Riwayat pada Apps Script dibuat vertikal. Ganti juga Index.html pada proyek Apps Script dan deploy ulang agar perbaikan bagian dalam tampil.
+IKON: icon-192.png dan icon-512.png sekarang memakai logo Athfal yang diberikan. Jika ikon lama masih tampil di HP setelah Push, hapus instalasi PWA lama lalu pasang lagi dari halaman Pages.
